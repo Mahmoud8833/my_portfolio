@@ -6,10 +6,13 @@
 
 body {
     background-color: #151719;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #f9fcff;
+
+}
+
+@font-face {
+    font-family: 'El Messiri';
+    src: url(/fonts/static/ElMessiri-Medium.ttf);
 }
 
 /* Start navcar */
@@ -19,42 +22,70 @@ body {
     top: 0;
     left: 0;
     z-index: 5;
-    background-color: #fff;
+    background-color: #151719;
     width: 100vw;
-    height: 2em;
+    height: 2.5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(68, 66, 66);
+}
+
+.navbar .logo,
+.nav-list {
+    color: rgb(177, 177, 177);
+    font-family: 'El Messiri', cursive;
+    font-weight: bold;
 }
 
 .navbar .nav-list {
     list-style: none;
-    width: 40%;
-    height: 2em;
+    width: 50%;
+    height: 2.5em;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    text-decoration: none;
 }
 
 /* End navbar */
 
 /* Start header (about) */
+.about {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303235;
+    border-radius: 0 0 20% 20%/ 0 0 100% 100%;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .3));
+}
+
+.my-pic {
+    width: 200px;
+    height: 300px;
+    border-radius: 30%;
+    margin-top: 3em;
+}
+
 .waviy {
     position: relative;
-    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    -webkit-box-reflect: below -50px linear-gradient(transparent, rgba(0, 0, 0, .2));
     font-size: 60px;
     text-align: center;
+    margin-top: 0.5em;
 }
 
 .waviy .char {
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'El Messiri', Tahoma;
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: rgb(221, 216, 216);
     text-transform: uppercase;
-    animation: waviy 1s infinite;
+    animation: waviy 2s infinite;
     animation-delay: calc(.1s * var(--i));
 
 }
@@ -73,7 +104,7 @@ body {
 }
 
 .para {
-    margin-top: 4em;
+    margin-top: 2em;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -81,13 +112,14 @@ body {
     align-items: center;
 }
 
-.para h1 {
-    font-family: "Montserrat Medium";
-    max-width: 40ch;
+.para h2 {
+    font-family: 'El Messiri', Tahoma;
+    max-width: 60%;
+    font-weight: 300;
     text-align: center;
-    color: #fff;
+    color: rgb(221, 216, 216);
     transform: scale(0.94);
-    animation: scale 3s 2s infinite forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: scale 2s 2s infinite forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 @keyframes scale {
