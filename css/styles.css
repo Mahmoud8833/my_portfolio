@@ -5,7 +5,6 @@
 }
 
 body {
-    background-color: #151719;
     background-color: #f9fcff;
 
 }
@@ -17,19 +16,24 @@ body {
 
 /* Start navcar */
 .navbar {
-    padding: 0 1em;
+    padding: 0 2em;
+    background-color: #303235;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 5;
-    background-color: #151719;
     width: 100vw;
     height: 2.5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(68, 66, 66);
+}
+
+.nav-shadow {
+    -webkit-box-shadow: 0px 8px 12px -9px rgba(221, 216, 216, 0.73);
+    -moz-box-shadow: 0px 8px 12px -9px rgba(221, 216, 216, 0.73);
+    box-shadow: 0px 8px 12px -9px rgba(221, 216, 216, 0.73);
 }
 
 .navbar .logo,
@@ -37,6 +41,7 @@ body {
     color: rgb(177, 177, 177);
     font-family: 'El Messiri', cursive;
     font-weight: bold;
+    font-size: larger;
 }
 
 .navbar .nav-list {
@@ -47,7 +52,25 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.navbar .nav-list li {
+    height: 85%;
+    padding-top: .3em;
+}
+
+.navbar .nav-list a {
+    display: block;
+    padding: 0 15px;
     text-decoration: none;
+    color: rgb(177, 177, 177);
+}
+
+.navbar .nav-list a:hover {
+    background-color: rgb(177, 177, 177);
+    color: #303235;
+    border-radius: 15px;
 }
 
 /* End navbar */
@@ -61,14 +84,16 @@ body {
     align-items: center;
     background-color: #303235;
     border-radius: 0 0 20% 20%/ 0 0 100% 100%;
-    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .3));
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
 }
 
 .my-pic {
     width: 200px;
     height: 300px;
     border-radius: 30%;
-    margin-top: 3em;
+    margin-top: 3.5em;
+    box-shadow: 0px 15px 10px rgba(206, 206, 206, 0.15);
 }
 
 .waviy {
@@ -83,7 +108,7 @@ body {
     font-family: 'El Messiri', Tahoma;
     position: relative;
     display: inline-block;
-    color: rgb(221, 216, 216);
+    color: #ddd8d8;
     text-transform: uppercase;
     animation: waviy 2s infinite;
     animation-delay: calc(.1s * var(--i));
@@ -214,3 +239,112 @@ body {
 }
 
 /* End header */
+
+/* Start Projects */
+.projects {
+    width: 100%;
+    padding: 5%;
+    height: fit-content;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #303235;
+    border-radius: 20% 20% 0 0/ 70% 70% 0 0;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.projects .projects-title {
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'El Messiri', Tahoma;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(221, 216, 216);
+}
+
+.projects .projects-title h1 {
+    font-size: xx-large;
+    margin-bottom: 2em;
+}
+
+.projects .projects-title p {
+    font-size: large;
+    margin-bottom: 2em;
+}
+
+.projects .card {
+    width: 360px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1em;
+    transform-style: preserve-3d;
+    -webkit-tap-highlight-color: rgba(#000, 0);
+}
+
+.projects .card .card-title {
+    width: 95%;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+.projects .card .card-img {
+    width: 95%;
+    height: 250px;
+}
+
+.projects .card .card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.projects .card .card-discreption {
+    width: 95%;
+    height: 100px;
+    border-top: 1px solid black;
+}
+
+/* End Projects */
+
+/* try */
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    perspective: 900px;
+}
+
+.container {
+    width: 300px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(60deg) scale(0.7);
+    transition: 0.5s all ease;
+    box-shadow: 0px 20px 50px #555;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container:hover {
+    transform: rotateX(0deg) scale(1) translateY(10px);
+}
+
+/* try */
