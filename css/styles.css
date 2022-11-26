@@ -2,11 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'El Messiri', Tahoma;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #f9fcff;
 
+}
+
+a {
+    text-decoration: none;
+    color: violet;
 }
 
 @font-face {
@@ -77,7 +87,7 @@ body {
 
 /* Start header (about) */
 .about {
-    height: 95vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,6 +96,7 @@ body {
     border-radius: 0 0 20% 20%/ 0 0 100% 100%;
     box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 2em;
+    padding-bottom: 2em;
 }
 
 .my-pic {
@@ -99,7 +110,7 @@ body {
 .waviy {
     position: relative;
     -webkit-box-reflect: below -50px linear-gradient(transparent, rgba(0, 0, 0, .2));
-    font-size: 60px;
+    font-size: 3em;
     text-align: center;
     margin-top: 0.5em;
 }
@@ -112,6 +123,7 @@ body {
     text-transform: uppercase;
     animation: waviy 2s infinite;
     animation-delay: calc(.1s * var(--i));
+    color: rgb(221, 216, 216);
 
 }
 
@@ -247,6 +259,7 @@ body {
     height: fit-content;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -254,6 +267,7 @@ body {
     background-color: #303235;
     border-radius: 20% 20% 0 0/ 70% 70% 0 0;
     box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 5em;
 }
 
 .projects .projects-title {
@@ -266,9 +280,10 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'El Messiri', Tahoma;
+    color: rgb(221, 216, 216);
     font-weight: 300;
     text-align: center;
-    color: rgb(221, 216, 216);
+
 }
 
 .projects .projects-title h1 {
@@ -282,7 +297,7 @@ body {
 }
 
 .projects .cards-container {
-    width: 90%;
+    width: 95%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -292,11 +307,12 @@ body {
 }
 
 .projects .cards-container .card {
-    width: 360px;
-    height: 450px;
+    width: 370px;
+    height: 500px;
+    background-color: rgb(221, 216, 216);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transform-style: preserve-3d;
     transform: rotateX(30deg) scale(0.9);
@@ -312,56 +328,149 @@ body {
 
 .projects .cards-container .card .card-title {
     width: 95%;
-    height: 50px;
+    height: fit-content;
     border-bottom: 1px solid black;
+    padding-bottom: .2em;
+}
+
+.projects .cards-container .card .card-title h1 {
+    text-align: center;
+    margin-bottom: 0.2em;
+    color: #303235;
+}
+
+.projects .cards-container .card .card-title a {
+    text-align: center;
+    color: #303235;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projects .cards-container .card .card-title a:hover {
+    font-style: italic;
+    color: rgb(96, 96, 182);
 }
 
 .projects .cards-container .card .card-img {
     width: 95%;
     height: 250px;
+    position: relative;
 }
 
 .projects .cards-container .card .card-img img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    object-fit: contain;
+    border-radius: 50px;
+    object-fit: cover;
     overflow: hidden;
+    padding: .2em;
+}
+
+.projects .cards-container .card .card-img .magnifier {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projects .cards-container .card .card-img .magnifier:hover {
+    display: block;
+}
+
+.projects .cards-container .card .card-img .magnifier svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: white;
 }
 
 .projects .cards-container .card .card-discreption {
     width: 95%;
-    height: 100px;
+    height: fit-content;
+    padding: .5em;
     border-top: 1px solid black;
 }
 
 /* End Projects */
 
-/* try */
+/* Start Skills */
+.skills {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303235;
+    border-radius: 0 0 20% 20%/ 0 0 100% 100%;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+}
+
+.skills p {
+    margin: .5em;
+    width: 70%;
+}
+
+.journey {
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'El Messiri', Tahoma;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(221, 216, 216);
+}
+
+.journey p {
+    width: 100%;
+}
+
+.skills {
+    color: rgb(221, 216, 216);
+    text-align: center;
+}
+
+.skills h1 {
+    margin-top: 2em;
+    font-size: xx-large;
+}
 
 
-.wrapper {
+
+.skills .skill-img {
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 90%;
     justify-content: space-around;
-    perspective: 500vh;
+    margin-top: 2em;
 }
 
-.container {
-    width: 300px;
-    height: 500px;
-    transform-style: preserve-3d;
-    transform: rotateX(60deg) scale(0.9);
-    transition: 0.5s all ease;
-    box-shadow: 0px 20px 50px #555;
-    border-radius: 20px;
-    overflow: hidden;
+.skills .skill-image .image {
+    width: 100%;
 }
 
-.container:hover {
-    transform: rotateX(0deg) scale(1) translateY(10px);
+/* End Skills */
+
+@media screen and (max-width:414px) {
+    .waviy {
+        font-size: 2.3em;
+    }
+
+    .projects .cards-container .card {
+        width: 320px;
+    }
 }
+
+/* try */
 
 /* try */
