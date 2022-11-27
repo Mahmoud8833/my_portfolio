@@ -5,20 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Mahmoud's Portfolio provides a great deal of information about my self, projcts, journey of learning web development and links to contact me.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Mahmoud A Ali</title>
+  <title>Mahmoud's Portfolio</title>
 </head>
 
 <body>
+
   <!-- Start navbar -->
   <nav class="navbar">
     <span class="logo">New Vision</span>
+    <input type="checkbox" id="nav-check">
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
     <ul class="nav-list">
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="">Contact Me</a></li>
-      <li><a href="">Links</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#links">Links</a></li>
     </ul>
   </nav>
   <!-- End navbar -->
@@ -292,7 +307,6 @@
     </div>
 
   </main>
-
   <!-- End projcts -->
 
   <!-- Start skills -->
@@ -304,11 +318,35 @@
       <p> I first enrolled in the <a href="https://egfwd.com/">FWD</a> program (A program in Egypt with Udacity) for
         beginners.</p>
       <p> Then I followed the <a href="https://www.freecodecamp.org/">FreeCodeCamp</a> program.</p>
+      <p>Then I learned a lot at <a href="https://www.linkedin.com/learning/">LinkedIn Learnig</a></p>
       <p>And lets not forget Youtube I learned a lot from the great tutorials posted by some of the great dvelopers on
         the world</p>
       <p>Lastly I followed the Meta frontend course on Coursera</p>
     </div>
 
+    <h1>-- My Certificates --</h1><br>
+    <div class="certs">
+      <!-- <h3>-- FWD & Udacity --</h3> -->
+      <img src="img/certs/01-challenger track certificate_001.png" alt="" width="400" height="400">
+      <img src="img/certs/02-nano Professional_001.png" alt="" width="400" height="400">
+
+      <!-- <h3>-- FreeCodeCamp --</h3> -->
+      <img src="img/certs/03-freecodecamp-responnsive-web-design.png" alt="" width="400" height="400">
+      <img src="img/certs/04-freecodecamp-javascript-algorithms-and-data-structures.png" alt="" width="400"
+        height="400">
+
+      <!-- <h3>-- LinkedIn Learnig --</h3> -->
+      <img src="img/certs/05-CertificateOfCompletion_Programming Foundations Fundamentals_001.png" alt="" width="400"
+        height="400">
+      <img src="img/certs/06-CertificateOfCompletion_Succeeding in Web Development Full Stack and Front End_001.png"
+        alt="" width="400" height="400">
+      <img src="img/certs/07-CertificateOfCompletion_HTML Essential Training_001.png" alt="" width="400" height="400">
+      <img src="img/certs/08-CertificateOfCompletion_CSS Essential Training_001.png" alt="" width="400" height="400">
+      <img src="img/certs/09-CertificateOfCompletion_Programming Foundations Databases_001.png" alt="" width="400"
+        height="400">
+
+
+    </div>
     <h1>-- My Skills --</h1><br>
     <div class="skill-img">
       <div class="image">
@@ -329,16 +367,72 @@
   <!-- End skills -->
 
   <!-- Start conatct me -->
-  <section class="form">
+  <!-- This design is thanks to Hakkam Abdullah pen =>  https://codepen.io/hkmDesigner/pen/zdPrVp  -->
 
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="front side">
+        <div class="content">
+          <h1>Contact Me</h1>
+          <p>I am ready to :
+          <ul>
+            <li>Design your website srom scratch.</li>
+            <li>Modify or edit your website style.</li>
+            <li> Transform your Figma, PSD, ...etc to HTML/CSS.</li>
+            <li>Make your website responsive.</li>
+            <br>
+            <li id="click">Click Here</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="back side">
+        <div class="content">
+          <h1>Contact Me</h1>
+
+          <?=$thankYou ?>
+          <form method="POST" action="contact.php">
+            <label for="sender">Your Name :</label>
+            <input type="text" placeholder="Name" id="sender" name="sender">
+
+            <label for="senderEmail">Your E-mail :</label>
+            <input type="text" placeholder="Example@mail.com" id="senderEmail" name="senderEmail">
+
+            <label>Your message :</label>
+            <textarea name="message" placeholder="The Subject"></textarea>
+            <input type="submit" name="submit" value="Done">
+          </form>
+
+        </div>
+      </div>
+    </div>
   </section>
   <!-- End conatct me -->
 
   <!-- Start footer -->
-  <footer class="links">
-
+  <footer class="links" id="links">
+    <p class="logo">New Vision</p>
+    <ul>
+      <li><a href="https://www.facebook.com/Mahmoud.Abdalaziz.Ali/"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://twitter.com/Mahmoud_a_ali88"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/mahmoud-abd-alaziz-ali/"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/Mahmoud8833"><i class="fab fa-github"></i></a></li>
+    </ul>
+    <p>
+      &#169; 2022 | Designed With by <a href="http://www.new-vision.ml">Mahmoud Abd Alaziz</a>
+    </p>
   </footer>
   <!-- End footer -->
+
+
+  <!-- Animated background -->
+  <!-- this effect is from sarazond pen => https://codepen.io/sarazond/pen/LYGbwj -->
+  <div class="main-stars">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  </div>
+
 </body>
 <script src="js/app.js"></script>
 
