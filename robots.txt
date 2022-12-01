@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.new-vision.ml/sitemap.xml
+
+User-agent: *
+Disallow: /

@@ -359,7 +359,7 @@ a {
     padding-bottom: .2em;
 }
 
-.projects .cards-container .card .card-title h1 {
+.projects .cards-container .card .card-title h2 {
     text-align: center;
     margin-bottom: 0.2em;
     color: #303235;
@@ -432,7 +432,7 @@ a {
 }
 
 
-.skills h1 {
+.skills h2 {
     margin-top: 2em;
     font-size: xx-large;
 }
@@ -607,7 +607,7 @@ a {
     height: fit-content;
 }
 
-.content h1 {
+.content h2 {
     position: relative;
 }
 
@@ -626,7 +626,7 @@ ul {
     font-size: large;
 }
 
-.content h1:before {
+.content h2:before {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -661,7 +661,7 @@ form {
     text-align: left;
 }
 
-.back h1 {
+.back h2 {
     margin: 0;
 }
 
