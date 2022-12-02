@@ -454,8 +454,8 @@ a {
     align-items: center;
 }
 
-.skills .certs h3:not(:nth-child(1)) {
-    margin-top: 3em;
+.skills .certs {
+    width: 95%;
 }
 
 .skills .certs img {
@@ -560,6 +560,10 @@ a {
 
     .projects .cards-container .card {
         width: 320px;
+    }
+
+    .skills .certs img {
+        width: 80%;
     }
 }
 
