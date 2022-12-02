@@ -26,7 +26,7 @@ a {
     src: url(/fonts/static/ElMessiri-Medium.ttf);
 }
 
-/* Start navcar */
+/* Start navbar */
 .navbar {
     padding: 0 2em;
     background-color: #303235;
@@ -119,7 +119,7 @@ a {
     box-shadow: 0px 15px 10px rgba(206, 206, 206, 0.15);
 }
 
-.waviy {
+.wavy {
     position: relative;
     -webkit-box-reflect: below -50px linear-gradient(transparent, rgba(0, 0, 0, .2));
     font-size: 3em;
@@ -127,19 +127,19 @@ a {
     margin-top: 0.5em;
 }
 
-.waviy .char {
+.wavy .char {
     font-family: 'El Messiri', Tahoma;
     position: relative;
     display: inline-block;
     color: #ddd8d8;
     text-transform: uppercase;
-    animation: waviy 2s infinite;
+    animation: wavy 2s infinite;
     animation-delay: calc(.1s * var(--i));
     color: rgb(221, 216, 216);
 
 }
 
-@keyframes waviy {
+@keyframes wavy {
 
     0%,
     40%,
@@ -400,7 +400,7 @@ a {
     fill: white;
 }
 
-.projects .cards-container .card .card-discreption {
+.projects .cards-container .card .card-description {
     width: 95%;
     height: fit-content;
     padding: .5em;
@@ -554,7 +554,7 @@ a {
 /* End Skills */
 
 @media screen and (max-width:414px) {
-    .waviy {
+    .wavy {
         font-size: 2.3em;
     }
 
@@ -606,7 +606,7 @@ a {
 }
 
 .content {
-    transform: translatez(70px) scale(0.8);
+    transform: translate(70px) scale(0.8);
     line-height: 1.5em;
     height: fit-content;
 }
@@ -779,7 +779,7 @@ form input[type="submit"] {
         font-size: small;
     }
 
-    .waviy {
+    .wavy {
         font-size: 1.5em;
     }
 }
